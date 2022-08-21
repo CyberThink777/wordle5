@@ -1,18 +1,3 @@
-/*
-Matt Parker
-Can you find: five five-letter words with twenty-five unique letters?
-FJORD
-GUCKS
-NYMPH
-VIBEX
-WALTZ
-Q
-Constraints:
-- No duplicate letters (valid words have 5 unique characters)
-- Order of letters irrelevant (ignore anagrams during search)
-- i.e. Word is Set of Characters
-*/
-
 mod tests;
 /// 32-bit representation of word
 /// This would exclude anagrams and duplicate char
@@ -35,12 +20,20 @@ mod representation {
         bits
     }
 
-    pub fn decode(bin: u32) -> String {
-        "TEST".to_string()
+    pub fn decode(bits: u32) -> String {
+        let mut chars: Vec<char> = vec![];
+
+        for i in 1..=26 {
+            let cur_bit_set = bits >> (i - 1) & 1;
+            if cur_bit_set == 1 {
+                if let Some(c) = char::from_u32((27 - i) + 96) {
+                    chars.push(c);
+                };
+            }
+        }
+
+        String::from_iter(chars)
     }
 }
 
-fn main() {
-    println!("------ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    println!("{:032b}, {}", representation::encode("testing"), "testing");
-}
+fn main() {}
