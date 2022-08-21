@@ -18,21 +18,61 @@ mod representation {
         }
         bits
     }
-
-    pub fn decode(bits: u32) -> String {
-        let mut chars: Vec<char> = vec![];
-
-        for i in 1..=26 {
-            let cur_bit_set = bits >> (i - 1) & 1;
-            if cur_bit_set == 1 {
-                if let Some(c) = char::from_u32((27 - i) + 96) {
-                    chars.push(c);
-                };
-            }
-        }
-
-        String::from_iter(chars)
-    }
 }
 
-fn main() {}
+const WORDS: &str = include_str!("../wordlist.txt");
+
+fn main() {
+    use itertools::Itertools;
+    use std::time::Instant;
+    let time = Instant::now();
+
+    let useable_words: Vec<(u32, &str)> = WORDS
+        .split_whitespace()
+        .map(|w| (representation::encode(w), w))
+        //remove dups
+        .filter(|(w, _)| w.count_ones() == 5)
+        //remove anagram
+        .unique_by(|(w, _)| *w)
+        .collect();
+
+    for (i, a) in useable_words.iter().enumerate() {
+        for j in i + 1..useable_words.len() {
+            let b = useable_words[j];
+            if a.0 & b.0 != 0 {
+                continue;
+            };
+            let ab = a.0 | b.0;
+
+            for k in j + 1..useable_words.len() {
+                let c = useable_words[k];
+                if ab & c.0 != 0 {
+                    continue;
+                };
+                let abc = ab | c.0;
+
+                for l in k + 1..useable_words.len() {
+                    let d = useable_words[l];
+                    if abc & d.0 != 0 {
+                        continue;
+                    };
+                    let abcd = abc | d.0;
+
+                    for m in l + 1..useable_words.len() {
+                        let e = useable_words[m];
+                        if abcd & e.0 != 0 {
+                            continue;
+                        };
+                        println!(
+                            "{:?} [{:.3?}]",
+                            vec![a.1, b.1, c.1, d.1, e.1],
+                            time.elapsed()
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    println!("Time: {:.3?}", time.elapsed());
+}
