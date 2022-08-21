@@ -1,6 +1,5 @@
 mod tests;
 /// 32-bit representation of word
-/// This would exclude anagrams and duplicate char
 /// 26 bits for A-Z, 6bits unused
 /// 26                        1
 /// A BCDEFGHIJKLMNOPQRSTUVWXYZ
