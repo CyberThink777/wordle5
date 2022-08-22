@@ -17,15 +17,15 @@ and [wordle-nyt-answers-alphabetical](https://gist.github.com/cfreshman/a7b77650
 
 Result (Single Threaded as of [675c226](https://github.com/CyberThink777/wordle5/commit/675c2265f871417329a43e7c19a45d49e12d77c6)):
 ```
-["bemix", "clunk", "grypt", "vozhd", "waqfs"] [43.245s]
-["bling", "jumpy", "treck", "vozhd", "waqfs"] [59.105s]
-["blunk", "cimex", "grypt", "vozhd", "waqfs"] [64.941s]
-["brick", "glent", "jumpy", "vozhd", "waqfs"] [83.935s]
-["brung", "cylix", "kempt", "vozhd", "waqfs"] [89.169s]
-["chunk", "fjord", "gymps", "vibex", "waltz"] [125.002s]
-["clipt", "jumby", "kreng", "vozhd", "waqfs"] [128.169s]
-["fjord", "gucks", "nymph", "vibex", "waltz"] [176.294s]
-["glent", "jumby", "prick", "vozhd", "waqfs"] [192.328s]
-["jumby", "pling", "treck", "vozhd", "waqfs"] [205.250s]
-Total time: 211.691s`
+["bemix", "clunk", "grypt", "vozhd", "waqfs"] [24.816s]
+["bling", "jumpy", "treck", "vozhd", "waqfs"] [34.505s]
+["blunk", "cimex", "grypt", "vozhd", "waqfs"] [39.342s]
+["brick", "glent", "jumpy", "vozhd", "waqfs"] [50.708s]
+["brung", "cylix", "kempt", "vozhd", "waqfs"] [53.322s]
+["chunk", "fjord", "gymps", "vibex", "waltz"] [78.501s]
+["clipt", "jumby", "kreng", "vozhd", "waqfs"] [83.149s]
+["fjord", "gucks", "nymph", "vibex", "waltz"] [119.038s]
+["glent", "jumby", "prick", "vozhd", "waqfs"] [128.946s]
+["jumby", "pling", "treck", "vozhd", "waqfs"] [137.380s]
+Time: 140.427s
 ```

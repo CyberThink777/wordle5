@@ -35,30 +35,31 @@ fn main() {
         //remove anagram
         .unique_by(|(w, _)| *w)
         .collect();
+    let useable_words_len = useable_words.len();
 
     for (i, a) in useable_words.iter().enumerate() {
-        for j in i + 1..useable_words.len() {
+        for j in i + 1..useable_words_len {
             let b = useable_words[j];
             if a.0 & b.0 != 0 {
                 continue;
             };
             let ab = a.0 | b.0;
 
-            for k in j + 1..useable_words.len() {
+            for k in j + 1..useable_words_len {
                 let c = useable_words[k];
                 if ab & c.0 != 0 {
                     continue;
                 };
                 let abc = ab | c.0;
 
-                for l in k + 1..useable_words.len() {
+                for l in k + 1..useable_words_len {
                     let d = useable_words[l];
                     if abc & d.0 != 0 {
                         continue;
                     };
                     let abcd = abc | d.0;
 
-                    for m in l + 1..useable_words.len() {
+                    for m in l + 1..useable_words_len {
                         let e = useable_words[m];
                         if abcd & e.0 != 0 {
                             continue;
