@@ -1,4 +1,4 @@
-Rust impl of [fredoverflow solution](https://gist.github.com/fredoverflow/a7c9f230d86787ed6164ef652f675d8d) on
+Rust impl of [fredoverflow solution](https://github.com/fredoverflow/wordle) on
 Original Matt Parker's Video [Can you find: five five-letter words with twenty-five unique letters?](https://youtu.be/_-AfhLQfb6w)
 <br>
 Solution example:
