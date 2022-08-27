@@ -3,5 +3,9 @@ name = "wordle5"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+lto = true
+strip = true
+
 [dependencies]
 itertools = "0.10"
