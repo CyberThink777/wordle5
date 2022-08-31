@@ -37,7 +37,8 @@ fn main() {
         .collect();
     let useable_words_len = useable_words.len();
 
-    for (i, a) in useable_words.iter().enumerate() {
+    for i in 0..useable_words_len {
+        let a = useable_words[i];
         for j in i + 1..useable_words_len {
             let b = useable_words[j];
             if a.0 & b.0 != 0 {
