@@ -15,17 +15,17 @@ wordlist.txt is taken by concatenating cfreshman
 [wordle-nyt-allowed-guesses](https://gist.github.com/cfreshman/40608e78e83eb4e1d60b285eb7e9732f) 
 and [wordle-nyt-answers-alphabetical](https://gist.github.com/cfreshman/a7b776506c73284511034e63af1017ee)
 
-Result (Single Threaded as of [675c226](https://github.com/CyberThink777/wordle5/commit/675c2265f871417329a43e7c19a45d49e12d77c6)):
+Result (Single Threaded as of [460f57a](https://github.com/CyberThink777/wordle5/commit/460f57aeeefac58e25ca351d7f5001a2c0fd4a8d)):
 ```
-["bemix", "clunk", "grypt", "vozhd", "waqfs"] [24.816s]
-["bling", "jumpy", "treck", "vozhd", "waqfs"] [34.505s]
-["blunk", "cimex", "grypt", "vozhd", "waqfs"] [39.342s]
-["brick", "glent", "jumpy", "vozhd", "waqfs"] [50.708s]
-["brung", "cylix", "kempt", "vozhd", "waqfs"] [53.322s]
-["chunk", "fjord", "gymps", "vibex", "waltz"] [78.501s]
-["clipt", "jumby", "kreng", "vozhd", "waqfs"] [83.149s]
-["fjord", "gucks", "nymph", "vibex", "waltz"] [119.038s]
-["glent", "jumby", "prick", "vozhd", "waqfs"] [128.946s]
-["jumby", "pling", "treck", "vozhd", "waqfs"] [137.380s]
-Time: 140.427s
+["bemix", "clunk", "grypt", "vozhd", "waqfs"] [21.880s]
+["bling", "jumpy", "treck", "vozhd", "waqfs"] [31.461s]
+["blunk", "cimex", "grypt", "vozhd", "waqfs"] [36.090s]
+["brick", "glent", "jumpy", "vozhd", "waqfs"] [48.229s]
+["brung", "cylix", "kempt", "vozhd", "waqfs"] [51.457s]
+["chunk", "fjord", "gymps", "vibex", "waltz"] [73.271s]
+["clipt", "jumby", "kreng", "vozhd", "waqfs"] [75.841s]
+["fjord", "gucks", "nymph", "vibex", "waltz"] [108.237s]
+["glent", "jumby", "prick", "vozhd", "waqfs"] [115.445s]
+["jumby", "pling", "treck", "vozhd", "waqfs"] [122.159s]
+Time: 126.575s
 ```
